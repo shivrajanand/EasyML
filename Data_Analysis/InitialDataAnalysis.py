@@ -7,6 +7,19 @@ class InitialDataAnalysisClass:
         print("\n-----------------------------------------------------------------\n")
 
     def initialDataAnalysis(self):
+      """
+      Takes one self argument which is a pandas dataframe
+      Outputs:
+      1. Dataframe Shape
+      2. Dataframe sample: 2% of data is shown. 1 random row is displayed if 2% of rows is 0
+      3. Information of columns
+      4. Name of columns
+      5. Missing Values
+      6. Mathematical Description of Data
+      7. Duplicate Values
+      8. Correlation
+      # NOTE: If column contains string datatypes then correlation will return ERROR Statement
+      """
       print("1. Size of data: \n")
       print(self.dataframe.shape)
       self.printline()
@@ -34,11 +47,4 @@ class InitialDataAnalysisClass:
         print(self.dataframe.corr())
       except Exception as e:
           print("ERROR: ", e)
-
-
-
-
-# if __name__ == "__main__":
-#     df = pandas.read_csv('test.csv')
-#     AnalyseDataframe(df)
 
